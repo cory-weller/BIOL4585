@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<div class="wrapper">
+    <div class="header">
+            <span>{{ site.title }}
+                <br>
+                {{ site.headerDescription }}
+            </span>
+    </div>
+
+    <div class="navbar">
+        <ul>
+          <li><a href="/"><i class="fas fa-home" style="{% if page.title == site.title %}color:#4CAF50 {% endif %}"></i></a></li>
+          <li><a class="{% if page.title == "Schedule" %}active {% endif %}tooltipped tooltipped-s" href="/schedule.html">Schedule</a></li>
+          <li><a href="/assets/docs/CAWeller_CV.pdf" target="_blank">CV</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+      {{ content }}
+    </div>
+      <div class="contentFooter">
+          <hr>
+          <a href="mailto:{{ site.emailName }}@{{ site.emailDomain }}"><i class="fas fa-envelope fa-lg"></i> Email</a> |
+          <a href="https://github.com/{{ site.github }}"><i class="fab fa-github fa-lg"></i> Github</a>
+      </div>
+
+</div>
+  </body>
+</html>
