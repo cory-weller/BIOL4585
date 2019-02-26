@@ -12,6 +12,9 @@ repo: cory-weller/BIOL4585
 
 **Office Hours**: Wednesdays, Noon - 2:00 PM in PLSB 403
 
+<center><a href="https://unsplash.com/@markusspiske"><img src="/assets/img/markus-spiske-507983-unsplash.jpg" width="300" height="300"></a></center>
+
+
 ## Course Description
 **Consider the human genome.** If you could copy, paste, and post one tweet (280 characters) per second, it would still take you 127 days of continuous tweeting to express just one human genome. Modern biological studies can involve hundreds to thousands of times more data. How do researchers handle data at such a scale? How is it possible to glean meaningful insight from big data?
 
@@ -20,8 +23,6 @@ repo: cory-weller/BIOL4585
 **After completing the course**, you’ll have conducted a genome-wide association study from start to finish. More importantly, you’ll have gained confidence and knowledge necessary to tackle computational problems in biology.
 
 *Prerequesites*: One level 3000 Biology course. While no programming knowledge is required, it is recommended that you have completed an introductory statistics class, such as STAT-2020.
-
-<center><img src="/assets/img/lab_stickers.jpg" width="300" height="300"></center>
 
 ## Course Objectives
 
@@ -41,6 +42,8 @@ will be able to:
 
 ## Course materials
 This course is intended to be as accessible as possible—all you will need is a modern laptop (with a keyboard) capable of accessing the internet. Primary literature will be distributed via Collab. All software used in this course will be free/open-source. Windows, Mac, and Linux operating systems are all acceptable. Accessing the UVA network off-grounds requires use of the Cisco VPN.
+
+<center><img src="/assets/img/lab_stickers.jpg" width="300" height="300"></center>
 
 ## Activities
  **Readings, reflections & discussions**: Prior to class meetings, you will read an excerpt of scientific literature, including relevant figures. At the start of each class meeting, you will discuss the reading and its figure(s), reflect on the rationale for representing data in a specific way, and considering alternative methods of representing data. This will function as a lead-in to a guided problem modeled after data similar to (or directly drawn from) your reading.  
