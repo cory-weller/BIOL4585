@@ -22,9 +22,9 @@
 
     <div class="navbar">
         <ul>
-          <li><a href="/"><i class="fas fa-home" style="{% if page.title == site.title %}color:#4CAF50 {% endif %}"></i>Home</a></li>
-          <li><a class="{% if page.title == "BIOL4585 Schedule" %}active {% endif %}tooltipped tooltipped-s" href="/schedule.html">Schedule</a></li>
-          <li><a class="{% if page.title == "BIOL4585 Tips" %}active {% endif %}tooltipped tooltipped-s" href="/how_to_succeed.html">Tips</a></li>
+          <li><a href="/{{ site.projectname }}"><i class="fas fa-home" style="{% if page.title == site.title %}color:#4CAF50 {% endif %}"></i>Home</a></li>
+          <li><a class="{% if page.title == "BIOL4585 Schedule" %}active {% endif %}tooltipped tooltipped-s" href="/{{ site.project.name }}/schedule.html">Schedule</a></li>
+          <li><a class="{% if page.title == "BIOL4585 Tips" %}active {% endif %}tooltipped tooltipped-s" href="/{{ site.project.name }}/how_to_succeed.html">Tips</a></li>
       </ul>
     </div>
 
