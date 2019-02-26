@@ -1,0 +1,12 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly=TRUE)
+filename <- args[1]
+
+dat <- read.table(filename, header=T)
+y <- -1 * log10(dat$P)
+x <- dat$BP
+
+png("GWAS.png")
+plot(x, y,  main = "Mitochondrial Chromosome GWAS", xlab="Base Pair Position on MT chromosome", ylab="-log10(P)")
+dev.off()

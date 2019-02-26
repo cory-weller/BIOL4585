@@ -1,0 +1,5 @@
+fruit	color	size
+banana	yellow	medium
+apple	red	small
+kiwi	green	small
+orange	orange	medium

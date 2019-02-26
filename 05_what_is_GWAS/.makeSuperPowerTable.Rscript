@@ -1,0 +1,30 @@
+#!/usr/bin/env Rscript
+
+dat <- data.table("person_id" = 1:1000)
+
+dat[, SNP := rep(c("snp_1","snp_2","snp_3","snp_4"), 250)]
+
+dat[, phenotype := rep(c("super","super","super","super","normal","normal","normal","normal"), 125)]
+
+
+# snp 1, same probability for all
+dat[SNP == "snp_1" & phenotype == "superpowered", allele := sample(c("A","B"), size=1, prob=c(0.95,0.05)), by=person_id]
+dat[SNP == "snp_1" & phenotype == "normal", allele := sample(c("A","B"), size=1,  prob=c(0.95,0.05)), by=person_id]
+
+
+# snp 2, strong signal
+dat[SNP == "snp_2" & phenotype == "superpowered", allele := sample(c("A","B"), size=1,  prob=c(0.95,0.05)), by=person_id]
+dat[SNP == "snp_2" & phenotype == "normal", allele := sample(c("A","B"), size=1,  prob=c(0.05,0.95)), by=person_id]
+
+
+# snp 2, no signal
+dat[SNP == "snp_3" & phenotype == "superpowered", allele := sample(c("A","B"), size=1,  prob=c(0.5,0.5)), by=person_id] 
+dat[SNP == "snp_3" & phenotype == "normal", allele := sample(c("A","B"), size=1,  prob=c(0.5,0.5)), by=person_id]
+
+
+# snp 4, weak signal
+dat[SNP == "snp_4" & phenotype == "superpowered", allele := sample(c("A","B"), size=1,  prob=c(0.55,0.45)), by=person_id]
+dat[SNP == "snp_4" & phenotype == "normal", allele := sample(c("A","B"), size=1,  prob=c(0.45,0.55)), by=person_id]
+
+write.table(dat[sample(1:1000)], file="superheroGWAS.txt", quote=F, row.names=F, col.names=T, sep="\t")
+

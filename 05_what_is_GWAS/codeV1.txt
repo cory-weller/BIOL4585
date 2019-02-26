@@ -1,0 +1,3 @@
+# Version 1
+
+for year in 2016 2017 2018 2019; do for semester in FA SP; do for term in first_term second_term; do echo $year $semester $term; done; done; done
