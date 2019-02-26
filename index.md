@@ -12,7 +12,7 @@ repo: cory-weller/BIOL4585
 
 **Office Hours**: Wednesdays, Noon - 2:00 PM in PLSB 403
 
-<center><a href="https://unsplash.com/@markusspiske"><img src="/assets/img/markus-spiske-507983-unsplash.jpg" width="300" height="300"></a></center>
+<center><a href="https://unsplash.com/@markusspiske"><img src="assets/img/markus-spiske-507983-unsplash.jpg" width="300" height="300"></a></center>
 
 
 ## Course Description

@@ -4,7 +4,7 @@ title: BIOL4585 Tips
 repo: cory-weller/BIOL4585
 ---
 
-<center><a href="https://unsplash.com/@adigold1"><img src="/assets/img/adi-goldstein-671017-unsplash.jpg" width="300" height="200"></a></center>
+<center><a href="https://unsplash.com/@adigold1"><img src="assets/img/adi-goldstein-671017-unsplash.jpg" width="300" height="200"></a></center>
 
 ## "...but I can't code"
 If this sounds like you, **perfect!** This course is intended for students like you. The class material is intended for those without any prior experience with programming languages or computer science. We will use a combination of in-class guided activities and online interactive tutorials to get you up to speed. We will also have a [*Slack channel*](http://biol4585sp19.slack.com/) for tech help, so if you're having problems, you can easily submit a question.
