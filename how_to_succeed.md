@@ -18,8 +18,3 @@ The skills developed in this course can only be learned by practicing them. This
  You will do well in this class if you actively participate and are making good-faith efforts to complete all required activities. Ideally, you would revisit and practice newly introduced concepts more than once per week – even if only for a few minutes per day. If you prefer learning to solve the problems in groups, you’re free to meet up with other students outside of class, or to collaborate online. Simply copying someone else’s work and pasting it into the command-line is not making effort to practice computational skills.
 
  To get the most out of this class, I **highly** encourage you to attend our community's weekly *Biology Programming Hours* (Noon to 2:00 PM on Wednesdays, in PLSB 403).
-
-<br>
-<br>
-<br>
-Photo credit: [Markus Spiske]()
