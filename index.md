@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BIOL4585 Homepage
+title: BIOL4585 | Syllabus
 repo: cory-weller/BIOL4585
 ---
 
