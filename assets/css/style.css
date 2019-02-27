@@ -310,8 +310,26 @@ h6 {
     margin-right:5%;
 }
 
+
 h1 {
     border-top: none;
+}
+
+
+
+/* use h3 for left-aligned headings */
+h3 {
+    border-top: none;
+    text-align: left;
+    margin-left: 0;
+    padding-bottom:0;
+}
+
+/* use h4 for centered text, e.g. image subtitles */
+h4 {
+    border-top: none;
+    padding:0px 0 10px;
+    font-weight: normal
 }
 
 p,

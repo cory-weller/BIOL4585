@@ -28,7 +28,7 @@ These values are then used in a Chi-square test. You can run it [here](https://w
 
 When running a GWAS, you are essentially running thousands and thousands of Chi-square tests--one for every locus (row) in a VCF file. In the end, you have a collection of genome positions (plotted on the X-axis) and significance scores (on the Y-axis). This form of displaying results is called a *Manhattan* plot. The name comes from the idea that when there are lots of SNPs, it looks like a city skyline, like that of Manhattan.
 
-![](/assets/manhattan.png)
+![](assets/img/manhattan.png)
 
 I've provided a VCF file `MT.500.vcf` that contains simulated genotype data for 500 individuals. You need to incorporate their phenotypic data together with genotype data to determine if any SNPs are associated with a modeled disease.
 
