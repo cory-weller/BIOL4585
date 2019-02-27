@@ -277,19 +277,22 @@
 body {
  background-color:#fff;
  padding:10px;
- font:14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size:1em;
+ line-height:1.375em;
+ font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
  color:#727272;
- font-weight:400;
-  font-size: calc(14px + (16 - 12) * ((100vw - 300px) / (901 - 330)));
-  line-height: calc(1.1em + (1.3 - 1.1) * ((100vw - 300px)/(901 - 330)));
+ font-weight:normal;
 }
 
-@media (min-width: 901px) {
+
+/* alternative settings for mobile resolution */
+@media (max-width: 901px) {
 body {
-    font-size:16px;
-    line-height:1.3em
+    font-size:1em;
+    line-height:1.25em
 }
 }
+
 
 h1,
 h2,
@@ -297,11 +300,18 @@ h3,
 h4,
 h5,
 h6 {
- color:#222;
- margin:10px 0 10px;
- text-align: center;
- padding-top:20px;
- padding-bottom:10px;
+    color:#222;
+    padding:10px 0 10px;
+    text-align: center;
+    line-height:1.375em;
+    margin:0;
+    border-top: 0.1rem solid #e5e5e5;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+h1 {
+    border-top: none;
 }
 
 p,
@@ -321,6 +331,7 @@ a:hover,
 a:focus {
  color:#069;
 }
+
 a small {
  font-size:11px;
  color:#777;
@@ -381,14 +392,6 @@ small {
  font-size:11px
 }
 
-hr {
- border:0;
- background:#e5e5e5;
- height:1px;
- margin:0 0 20px
-}
-
-
 
 .wrapper {
     margin:auto;
@@ -414,7 +417,7 @@ hr {
 
 .navbar {
     margin: auto;
-    height: 70px;
+    height: 35px;
     width: 100%;
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -428,6 +431,7 @@ hr {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top:0;
+    font-size:1.3em;
 }
 
 .navbar {
@@ -449,6 +453,7 @@ hr {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  line-height:35px;
 }
 
 
@@ -460,6 +465,7 @@ hr {
   padding-top:8px;
   padding-bottom:8px;
   text-decoration: none;
+  line-height:35px;
 }
 
 .navbar li a:hover:not(.active) {
@@ -476,13 +482,14 @@ background-color: #393f47;
 
 .content {
     margin: auto;
-    top: 20px;
+    margin-top: 35px;
     height: 100%;
     width: 93%;
     position: static;
     background-color: white;
     text-align: left;
 }
+
 
 .contentFooter {
     margin: auto;

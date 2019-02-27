@@ -14,8 +14,7 @@ repo: cory-weller/BIOL4585
 
 <center><a href="https://unsplash.com/@markusspiske"><img src="assets/img/markus-spiske-507983-unsplash.jpg" width="300" height="300"></a></center>
 
-
-## Course Description
+## Course Description longer title now
 **Consider the human genome.** If you could copy, paste, and post one tweet (280 characters) per second, it would still take you 127 days of continuous tweeting to express just one human genome. Modern biological studies can involve hundreds to thousands of times more data. How do researchers handle data at such a scale? How is it possible to glean meaningful insight from big data?
 
 **In this course**, you will develop your computational repertoire while practicing on a model framework: how to identify genetic variation related to a phenotype, such as disease. You will be gaining theoretical background from primary literature, manipulating files on a command-line, accessing online repositories, transforming/analyzing data within a computational programming language, and producing efficient graphical displays.
@@ -25,8 +24,6 @@ repo: cory-weller/BIOL4585
 *Prerequesites*: One level 3000 Biology course. While no programming knowledge is required, it is recommended that you have completed an introductory statistics class, such as STAT-2020.
 
 ## Course Objectives
-
-Course objectives
 This course is intended to introduce you to the computational methods that biologists use to answer
 questions. In actuality, computational problem solving is much like any other kind of problem solving. You
 will identify a question or problem, break that problem apart into smaller manageable parts, and tackle

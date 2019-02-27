@@ -4,7 +4,7 @@ title: BIOL4585 Schedule
 repo: cory-weller/BIOL4585
 ---
 
-## Schedule
+# Schedule
 
 | Week | Topic |
 | ---- | ----- |
