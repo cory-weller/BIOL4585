@@ -1,7 +1,6 @@
 ---
 layout: default
-title: BIOL4585 | Syllabus
-repo: cory-weller/BIOL4585
+subject: Syllabus
 ---
 
 # Introduction to Computational Biology  

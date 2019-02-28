@@ -275,7 +275,6 @@
 }
 
 body {
- background-color:#fff;
  padding:10px;
  font-size:1em;
  line-height:1.375em;
@@ -341,10 +340,16 @@ dl {
  margin:0 0 3px
 }
 
-a {
- color:#267CB9;
+.content a {
+ color:#4b6484;
+ text-decoration:underline;
+}
+
+.contentFooter a {
+ color:#4b6484;
  text-decoration:none
 }
+
 a:hover,
 a:focus {
  color:#069;
@@ -435,6 +440,7 @@ small {
 
 .navbar {
     margin: auto;
+    padding-bottom:0;
     height: 35px;
     width: 100%;
     position: -webkit-sticky; /* Safari */
@@ -443,20 +449,10 @@ small {
     text-align: center;
 }
 
-@media (min-width: 901px) {
 
-.header {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top:0;
-    font-size:1.3em;
-}
 
-.navbar {
-    top: 100px;
-    display:inline-block;
-}
-
+.standardNav {
+display:none;
 }
 
 .header span {
@@ -469,30 +465,33 @@ small {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  background-color: #393f47;
   line-height:35px;
 }
 
 
 .navbar li a {
   float:left;
+  text-align: left;
+  width:100%;
   color: white;
   padding-left: 15px;
   padding-right: 12px;
-  padding-top:8px;
-  padding-bottom:8px;
+  padding-top:0;
+  padding-bottom:0;
   text-decoration: none;
   line-height:35px;
+    transition:background .3s;
 }
+
+
 
 .navbar li a:hover:not(.active) {
   background-color: #111;
 }
 
-.active {
-  background-color: #4CAF50;
-}
+
+
 
 body {
 background-color: #393f47;
@@ -514,7 +513,6 @@ background-color: #393f47;
     width: 93%;
     position: relative;
     bottom:0;
-    background-color: white;
     text-align: center;
     padding: 15px 0px 0px 0px;
 }
@@ -537,4 +535,171 @@ p {
 
 ul {
     padding-bottom:20px;
+}
+
+
+/* dropdown menu */
+
+/*General styles for body*/
+body{
+  margin:0;
+  padding:3em 0;
+  font-family:Helvetica, Arial, sans-serif;
+  background:#393f47;
+  color:#222;
+}
+
+article{margin:10px;}
+
+/*Style for the first level menu bar*/
+ul#menu{
+  position:relative;
+  top:0;
+  width:100%;
+  height:3em;
+  margin:0;
+  padding:0;
+  background:#393f47;
+  color:#eee;
+  box-shadow:0 -1px rgba(0,0,0,.5) inset;
+}
+
+ul#menu > li{
+  float:left;
+  list-style-type:none;
+  position:relative;
+  width:120px;
+}
+
+label{
+    text-align:left;
+  position:relative;
+  display:block;
+  padding-left:16px;
+  padding-right:16px;
+  line-height:3em;
+  transition:background 0.3s;
+  cursor:pointer;
+  width:100%;
+}
+
+label:after{
+  content:"";
+  position:absolute;
+  display:block;
+  top:50%;
+  right:5px;
+  width:0;
+  height:0;
+  border-top:4px solid rgba(255,255,255,.5);
+  border-bottom:0 solid rgba(255,255,255,.5);
+  border-left:4px solid transparent;
+  border-right:4px solid transparent;
+  transition:border-bottom .1s, border-top .1s .1s;
+  }
+
+label:hover,
+input:checked ~ label{background:rgba(0,0,0,.3);}
+
+input:checked ~ label:after{
+  border-top:0 solid rgba(255,255,255,.5);
+  border-bottom:4px solid rgba(255,255,255,.5);
+  transition:border-top .1s, border-bottom .1s .1s;
+}
+
+/*hide the inputs*/
+input{display:none}
+
+/*show the second levele menu of the selected voice*/
+input:checked ~ ul.submenu{
+  max-height:500px;
+  transition:max-height 0.5s ease-in;
+}
+
+/*style for the second level menu*/
+ul.submenu{
+  max-height:0;
+  padding:0;
+  overflow:hidden;
+  list-style-type:none;
+  background:#393f47;
+  box-shadow:0 0 1px rgba(0,0,0,.3);
+  transition:max-height 0.5s ease-out;
+  position:absolute;
+  min-width:100%;
+          z-index: 10;
+}
+
+ul.submenu li a{
+  display:block;
+  width:120px;
+  padding:16px;
+  color:#ddd;
+  text-decoration:none;
+  box-shadow:0 -1px rgba(0,0,0,.5) inset;
+  transition:background .3s;
+  white-space:nowrap;
+}
+
+ul.submenu li a:hover{
+  background:#111;
+}
+
+
+
+@media (min-width: 901px) {
+
+.header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+    font-size:1.3em;
+}
+
+.navbar {
+    top: 100px;
+    display:inline-block;
+    height:51px;
+    background-color:#393f47;
+}
+
+.mobileNav {
+display:none;
+}
+
+.standardNav {
+display:inline-block;
+text-align:center;
+  list-style-type: none;
+  background-color:#393f47;
+  height:100%;
+}
+
+.standardNav li {
+    display:inline;
+}
+
+.standardNav li a{
+    width:110px;
+    height:100%;
+    line-height:50px;
+}
+
+
+
+.navbar li a:hover{
+  background:#111;
+}
+
+.navbar li a {
+    text-align:center
+}
+
+}
+
+
+
+.active {
+  background-color: black;
+  color:#4CAF50 !important;
 }

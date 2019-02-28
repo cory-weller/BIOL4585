@@ -2,7 +2,7 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>{{ site.projectname }} | {{ page.subject }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Note: the stylesheet on the next line refers to the base directory of the username.github.io repository. Remove the leading / before assets to use this repository's stylesheet.  -->
@@ -22,11 +22,26 @@
     </div>
 
     <div class="navbar">
-        <ul>
-          <li><a class="{% if page.title == "BIOL4585 | Syllabus" %}active {% endif %}tooltipped tooltipped-s" href="index.html">Syllabus</a></li>
-          <li><a class="{% if page.title == "BIOL4585 | Schedule" %}active {% endif %}tooltipped tooltipped-s" href="schedule.html">Schedule</a></li>
-          <li><a class="{% if page.title == "BIOL4585 | How To Succeed" %}active {% endif %}tooltipped tooltipped-s" href="how_to_succeed.html">Tips</a></li>
-      </ul>
+<!-- Mobile Nav  -->
+    <div class="mobileNav">
+        <ul id="menu">
+          <li>
+            <input id="check01" type="checkbox" name="menu"/>
+            <label for="check01"><i class="fas fa-bars fa-fw"></i> Menu</label>
+            <ul class="submenu">
+        <li><a href="/" class="{% if page.subject == "Syllabus" %} active {% endif %}"><i class="fas fa-file-alt fa-fw" style="{% if page.subject == "Syllabus" %}color:#4CAF50 {% endif %}"></i> Syllabus</a></li>
+        <li><a href="schedule.html" class="{% if page.subject == "Schedule" %} active {% endif %}"><i class="fas fa-calendar fa-fw" style="{% if page.subject == "Schedule" %}color:#4CAF50 {% endif %}"></i> Schedule</a></li>
+        <li><a href="how_to_succeed.html" class="{% if page.subject == "How to Succeed" %} active {% endif %}"><i class="fas fa-check fa-fw" style="{% if page.subject == "Research" %}color:#4CAF50 {% endif %}"></i> Tips</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+    <!-- Standard Nav  -->
+    <div class="standardNav">
+        <li><a href="index.html" class="{% if page.subject == "Syllabus" %} active {% endif %}"><i class="fas fa-file-alt fa-fw" style="{% if page.subject == "Syllabus" %}color:#4CAF50 {% endif %}"></i> Syllabus</a></li>
+        <li><a href="schedule.html" class="{% if page.subject == "Schedule" %} active {% endif %}"><i class="fas fa-calendar fa-fw" style="{% if page.subject == "Schedule" %}color:#4CAF50 {% endif %}"></i> Schedule</a></li>
+        <li><a href="how_to_succeed.html" class="{% if page.subject == "How to Succeed" %} active {% endif %}"><i class="fas fa-check fa-fw" style="{% if page.subject == "Research" %}color:#4CAF50 {% endif %}"></i> Tips</a></li>
+    </div>
     </div>
 
     <div class="content">

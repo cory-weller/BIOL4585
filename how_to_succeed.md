@@ -1,7 +1,6 @@
 ---
 layout: default
-title: BIOL4585 | How To Succeed
-repo: cory-weller/BIOL4585
+subject: How to Succeed
 ---
 
 
