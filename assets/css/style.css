@@ -381,8 +381,6 @@ pre {
 pre {
  padding:8px 15px;
  background:#f8f8f8;
- border-radius:5px;
- border:1px solid #e5e5e5;
  overflow-x:auto
 }
 table {
@@ -426,8 +424,6 @@ small {
     padding-bottom: 25px;
     text-align: center;
     background-color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
 }
 
 .header {
@@ -545,7 +541,7 @@ ul {
 /*General styles for body*/
 body{
   margin:0;
-  padding:3em 0;
+  padding:0;
   font-family:Helvetica, Arial, sans-serif;
   background:#393f47;
   color:#222;
