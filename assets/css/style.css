@@ -409,6 +409,7 @@ img {
     max-height: 300px;
     text-align:center;
     padding:10px;
+    clear:both;
 }
 
 small {
@@ -421,31 +422,13 @@ small {
     width:96%;
     max-width: 850px;
     min-width: 330px;
-    padding-bottom: 25px;
     text-align: center;
     background-color: white;
 }
 
-.header {
-    margin: 0px;
-    height: 100px;
-    line-height: 100px;
-    width: 100%;
-    position: static;
-    text-align: center;
-    background-color: white;
-}
 
-.navbar {
-    margin: auto;
-    padding-bottom:0;
-    height: 35px;
-    width: 100%;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    text-align: center;
-}
+
+
 
 
 
@@ -495,24 +478,42 @@ body {
 background-color: #393f47;
 }
 
+
+
 .content {
-    margin: auto;
-    margin-top: 35px;
+top:8rem;
     height: 100%;
     width: 93%;
-    position: static;
+    position: relative;
     background-color: white;
     text-align: left;
+    margin:auto;
+    overflow:hidden;
+     margin-bottom:130px;
+
 }
 
 
+@media (max-width: 900px) {
+.header{
+    display:none
+}
+.content {
+top:50px;
+margin-bottom:60px;
+}
+}
+
 .contentFooter {
     margin: auto;
-    width: 93%;
+    width: 100%;
     position: relative;
-    bottom:0;
     text-align: center;
-    padding: 15px 0px 0px 0px;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-top: 3px solid #393f47;
+    line-height:3em;
+    border-bottom: 15px solid #393f47;
 }
 
 .fas {
@@ -587,9 +588,6 @@ font-size:1em;
 text-align:right;
 }
 
-.header {
-display:none;
-}
 
 ul#menu > li{
   float:left;
@@ -674,23 +672,40 @@ ul.submenu li a:hover{
   background:#111;
 }
 
+.mobileNav {
+position:fixed;
+width:96%;
+margin:auto;
+z-index: 500;
+}
 
 
 @media (min-width: 901px) {
 
 .header {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
+    width: 96%;
+    max-width: 850px;
+    min-width: 330px;
+    position: fixed;
     top:0;
     font-size:1.3em;
-    display:block
+    line-height:1.3em;
+    background: white;
+    height:5rem;
+        z-index: 500;
+
 }
 
 .navbar {
-    top: 100px;
-    display:inline-block;
-    height:51px;
+    top: 5rem;
+    width: 96%;
+    max-width: 850px;
+    min-width: 330px;
+    position: fixed;
+    height:3rem;
     background-color:#393f47;
+        z-index: 500;
+
 }
 
 .mobileNav {
