@@ -274,6 +274,7 @@
  background-color:#f8f8f8
 }
 
+
 body {
  padding:10px;
  font-size:1em;
@@ -282,6 +283,7 @@ body {
  color:#727272;
  font-weight:normal;
 }
+
 
 
 /* alternative settings for mobile resolution */
@@ -459,6 +461,7 @@ display:none;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+    font-size:1.5em;
 }
 
 .navbar ul {
@@ -468,7 +471,6 @@ display:none;
   background-color: #393f47;
   line-height:35px;
 }
-
 
 .navbar li a {
   float:left;
@@ -551,8 +553,11 @@ body{
 
 article{margin:10px;}
 
+
+
 /*Style for the first level menu bar*/
 ul#menu{
+    display:block;
   position:relative;
   top:0;
   width:100%;
@@ -562,21 +567,51 @@ ul#menu{
   background:#393f47;
   color:#eee;
   box-shadow:0 -1px rgba(0,0,0,.5) inset;
+    line-height:3em;
+}
+
+.headerTitle {
+    float:right;
+    padding-left:0;
+    padding-right:40px;
+    width:300px;
+display:flex;
+text-decoration:none;
+line-height:1.5em;
+color:white;
+    justify-content: right;
+    text-align:right;
+}
+
+.headerTitle a {
+    display:flex;
+text-decoration:none;
+line-height:1.5em;
+color:white;
+margin-right:4px;
+font-size:1em;
+text-align:right;
+}
+
+.header {
+display:none;
 }
 
 ul#menu > li{
   float:left;
   list-style-type:none;
   position:relative;
-  width:120px;
+  width:40px;
+  margin-left:2px;
+  margin-right:5px;
 }
 
 label{
     text-align:left;
   position:relative;
   display:block;
-  padding-left:16px;
-  padding-right:16px;
+  padding-left:15px;
+  padding-right:15px;
   line-height:3em;
   transition:background 0.3s;
   cursor:pointer;
@@ -654,6 +689,7 @@ ul.submenu li a:hover{
     position: sticky;
     top:0;
     font-size:1.3em;
+    display:block
 }
 
 .navbar {
