@@ -9,7 +9,7 @@ subject: Content
 
 | Week | Topic |
 | ---- | ----- |
-| 1 | [Course introduction](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/01_introduction) |
+| 1 | Course introduction |
 | 2 | [Connecting to the command-line](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/02_connecting_to_command_line) |
 | 3 | [Navigating in bash](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/03_navigating_in_bash) |
 | 4 | [Regular expressions](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/04_regular_expressions) |
