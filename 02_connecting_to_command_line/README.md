@@ -6,8 +6,8 @@ Humans don't natively speak in binary, meaning there ultimately must be a transl
 
 You are probably accustomed to a graphical user interface (or **GUI**, pronounced *gooey*) for interacting with your computer. GUIs have menus and icons that you can click on to perform tasks on your computer. Macs, Windows computers, and smartphones are all machines with graphical user interfaces.
 
-<center><a href="assets\img\graphical_user_interface.png"><img src="assets\img\graphical_user_interface.png" height="225" width="300"></a></center>
-#### A graphical user interface or GUI
+![](assets\img\graphical_user_interface.png)
+*A graphical user interface or GUI*
 
 The alternative to a GUI is a **Command-line interface** (CLI, or commonly called **command-line** for short). This is an interface for communicating with a computer via text input--no clickable menus or buttons!
 
@@ -20,9 +20,13 @@ While a text-only interface may sound clunky to use at first, it enables a level
 
 To recap new vocabulary:
 **[shell](https://en.wikipedia.org/wiki/Shell_(computing))**: a program that accepts user input and translates it into tasks to run on a computer
+
 **[GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)**: a graphical user interface--a shell with visual menus, icons and/or buttons
+
 **[CLI](https://en.wikipedia.org/wiki/Command-line_interface)**: a command-line interface--a shell where commands are entered as text input
+
 **[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell))**: a specific command-line interface shell, commonly used in Linux operating systems
+
 **[Linux](https://en.wikipedia.org/wiki/Linux)**: a family of free operating systems, like Ubuntu and Fedora, that heavily lean on command-line use
 
 ## The Rivanna computing clusters
