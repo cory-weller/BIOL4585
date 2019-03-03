@@ -6,13 +6,15 @@ Humans don't natively speak in binary, meaning there ultimately must be a transl
 
 You are probably accustomed to a graphical user interface (or **GUI**, pronounced *gooey*) for interacting with your computer. GUIs have menus and icons that you can click on to perform tasks on your computer. Macs, Windows computers, and smartphones are all machines with graphical user interfaces.
 
-![](assets\img\graphical_user_interface.png)
+![](assets/img/graphical_user_interface.png)
+
 *A graphical user interface or GUI*
 
 The alternative to a GUI is a **Command-line interface** (CLI, or commonly called **command-line** for short). This is an interface for communicating with a computer via text input--no clickable menus or buttons!
 
-<center><a href="assets\img\bash_command_line_interface.png"><img src="assets\img\bash_command_line_interface.png" height="225" width="300"></a></center>
-#### A `bash` command-line interface, common to linux operating systems
+![](assets/img/bash_command_line_interface.png)
+
+*A `bash` command-line interface, common to linux operating systems*
 
 Notice that the command `cd` was used to changed directories until in a desired location, and `ls` then printed a list of files and folders. The above two images are showing the same information, one with a GUI, the other on the command-line.
 
