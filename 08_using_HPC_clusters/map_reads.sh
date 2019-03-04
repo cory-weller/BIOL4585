@@ -29,7 +29,7 @@ bwa index MT_reference.fasta
 
 # Align reads to reference genome
 echo "aligning reads to reference"
-bwa mem MT_reference.fasta ${accessionID}.fastq > MT.sam
+bwa mem -t 1 MT_reference.fasta ${accessionID}.fastq > MT.sam
 
 # Convert to .bam format
 echo "converting .sam to .bam"
@@ -55,4 +55,4 @@ gatk ValidateSamFile --INPUT MT.sorted.readgroups.bam
 
 # Run haplotypecaller to generate VCF
 echo "running haplotypecaller"
-gatk HaplotypeCaller -nct 4 --input MT.sorted.readgroups.bam --reference MT_reference.fasta --output MT.vcf
+gatk HaplotypeCaller --input MT.sorted.readgroups.bam --reference MT_reference.fasta --output MT.vcf
