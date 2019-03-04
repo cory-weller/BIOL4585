@@ -78,7 +78,7 @@ The resource requests are usually included in the header of a `bash` script. Vie
 
 To **submit** a new job, use the `sbatch` command followed by the name of the slurm script to be submitted.
 
-to **view your recent job history**, use the `sacct` command. Jobs can either be **PENDING** while waiting for resources to be available and **RUNNING** while being executed. Jobs that you interrupt will be labeled **CANCELLED** and jobs that exit with errors will be labeled **FAILED**. Those that exit without errors are labeled **COMPLETED**.
+to **view your recent job history**, use the `sacct` command. Jobs typically have one of the following statuses:
 
 | Job Status | Meaning |
 | ---------- | ------- |
@@ -92,11 +92,13 @@ to **view your recent job history**, use the `sacct` command. Jobs can either be
 
 To **cancel** a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, and you can view these IDs when you print your job history using `sacct`. You may wish to cancel a job if you realize there are mistakes in the code you submitted.
 
-Submit the example_1 script located in your folder, as shown below. The job should take a minute to run
+First, view the contents of the example slurm script to request 1 core (`--ntasks`), 1GB of memory (`--mem`), on the queue `standard` (`--partition`), using the class allocation (`--account`, run `allocations` to view which allocations you have access to). Then, submit the script as a job (shown below). The job should take a minute to run.
 
 ```bash
-sbatch ./example_1.slurm
+sbatch ./example.slurm
 ```
+
+
 
 Check the progress of the job using `sacct`, to see the progress change from pending to running to completed.
 
