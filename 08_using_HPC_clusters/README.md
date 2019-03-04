@@ -66,7 +66,7 @@ Typically, a research group will have an *allocation* of service units that ever
   * the **dev** is for developing and testing scripts on a small scale. This queue doesn't cost any core-hours when running, and is intended to be used to make sure code works, not for heavy use. After testing code in the **dev** queue, your tasks can be ran at the full scale on the other queues.
 
 ### *SLURM* requests are formatted in `bash` scripts
-The resource requests are usually included in the header of a `bash` script. View the contents of `example_1.slurm` and `example_2.slurm` to see how they are typically formatted. The parameters in these example files are:
+The resource requests are usually included in the header of a `bash` script. View the contents of `example.slurm` to see how they are typically formatted. The parameters in these example files are:
 
   * `--ntasks` followed by an integer, the number of cores requested
   * `--mem` followed by the memory requested, e.g. `8G` for 8 gigabytes, `120M` for 120 megabytes
@@ -79,6 +79,16 @@ The resource requests are usually included in the header of a `bash` script. Vie
 To **submit** a new job, use the `sbatch` command followed by the name of the slurm script to be submitted.
 
 to **view your recent job history**, use the `sacct` command. Jobs can either be **PENDING** while waiting for resources to be available and **RUNNING** while being executed. Jobs that you interrupt will be labeled **CANCELLED** and jobs that exit with errors will be labeled **FAILED**. Those that exit without errors are labeled **COMPLETED**.
+
+| Job Status | Meaning |
+| ---------- | ------- |
+| PENDING | Job has not started yet, and is waiting for resources |
+| RUNNING | Job is currently running |
+| FAILED | Job exited with errors |
+| COMPLETED  | Job exited without errors |
+| CANCELLED  | Job was cancelled by the user or an administrator |
+| TIMEOUT  | Job was terminated because it ran longer than requested |
+
 
 To **cancel** a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, and you can view these IDs when you print your job history using `sacct`. You may wish to cancel a job if you realize there are mistakes in the code you submitted.
 
