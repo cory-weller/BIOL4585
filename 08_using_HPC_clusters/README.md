@@ -103,13 +103,13 @@ But this time, cancel the job using `scancel` after it starts. Check your job hi
 
 First, we'll edit and test the script using the `dev` queue, which doesn't cost any service units to run. However, jobs on the `dev` queue have a very low maximum time limit compared to others. Check out the other queues by running the command `queues`.
 
-1. Make a copy of the `map_reads.sh` file for editing (so we can keep the same original intact, just in case).
+1. Make a copy of the `map_reads.slurm` file for editing (so we can keep the same original intact, just in case).
 2. Insert an appropriate SLURM header to this newly-created file. You'll only need a single core (`--ntasks`) and 8GB of memory. You'll want to use the `dev` queue
 3. Submit this newly edited script as a job.
 
 ## Scaling up to the full-sized job
 
-Create another copy of `map_reads.sh` as a new file for the full-sized run. You can then edit this file in the following ways:
+Create another copy of `map_reads.slurm` as a new file for the full-sized run. You can then edit this file in the following ways:
 
 1. remove `-X <integer>` from the `fastq-dump` line so the full file is downloaded, instead of just the first <integer> sequencing reads
 2. create a SLURM header that requests at leats 1 hour of time, 4 cores (tasks), and 32GB of memory on the `standard` queue (instead of `dev`)
@@ -120,13 +120,13 @@ Create another copy of `map_reads.sh` as a new file for the full-sized run. You 
 7. a fully successfull run should produce no errors, and an output `MT.vcf` file.
 
 ## Using job arrays
-Sometimes you might want to submit a large number of similar jobs. For example, if we wanted to run the `map_reads.sh` script for hundreds of different `.fastq` files. Instead of having to run `sbatch` over and over again, you can submit a job array. If you wanted to submit 700 jobs, but run no more than 10 at a time, you could run:
+Sometimes you might want to submit a large number of similar jobs. For example, if we wanted to run the `map_reads.slurm` script for hundreds of different `.fastq` files. Instead of having to run `sbatch` over and over again, you can submit a job array. If you wanted to submit 700 jobs, but run no more than 10 at a time, you could run:
 
 ```bash
-sbatch --array=1-700%10 map_reads.sh
+sbatch --array=1-700%10 map_reads.slurm
 ```
 
-this would run the `map_reads.sh` job 700 times, allowing at most 7 to be running simultaneously.
+this would run the `map_reads.slurm` job 700 times, allowing at most 7 to be running simultaneously.
 
 Edit the `array_jobs.slurm` file to run with a single core, 1GB of memory, a 5 minute time request, on the standard queue. Then, submit `array_jobs.slurm` as an array of 50 jobs, limited to 5 at a time. Once submitted, use `sacct` to track the progress of your jobs.
 
@@ -137,6 +137,11 @@ Edit the `array_jobs.slurm` file to run with a single core, 1GB of memory, a 5 m
 4. You view the contents a file and notice the first line is `#!/usr/bin/env python`. What is this kind of line called, and what does it tell you about the file? What does this tell the *shell* about the file?
 5. How does editing files in atom using sftp compare to editing files using `vim` or `nano`? Which do you prefer and why?
 6. You check your job progress using `sacct` and see that one of your job's status is **FAILED**. Where would you first look to diagnose the problem?
+7. Examine the below line, from the `map_reads.slurm` file. Until now you haven't seen `&&` used before. What does `&&` accomplish and why might it be useful?
+
+```bash
+mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cp ../MT_reference.fasta .
+```
 
 ## Homework
 
