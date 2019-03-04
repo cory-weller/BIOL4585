@@ -19,4 +19,4 @@ The text editor **atom**, developed by the team that made [github](https://githu
 5. You will be prompted to create a password--this is an entirely new password, specific to the text editor. Think of it like a master password for accessing other servers.
 
 
-![](assets/img/atom_sftp_settings.png)
+![](/BIOL4585/assets/img/atom_sftp_settings.png)
