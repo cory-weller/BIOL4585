@@ -7,7 +7,7 @@ Last week, you performed association tests using `plink`,  a `.vcf` file contain
 These kind of calculations will take more processing power than we've been using so far. If we tried to run a GWAS using a single processing core, it would take far too long. Luckily, *Rivanna* is a **High-Performance Computing** system made up of hundreds of processing cores that can be accessed by users. Today, we'll learn how to access these powerful computing resources.
 
 Specifically, you will learn:
-  * How to quickly view and modify text files using SFTP within a text editor. [*link*](viewing-and-editing-files-with-sftp)
+  * How to quickly view and modify text files using SFTP within a text editor. [*link*](#viewing-and-editing-files-with-sftp)
   * Why it's necessary to submit jobs, instead of just running things interactively
   * How *core-hours* represent the 'currency' of HPC systems
   * How to submit and monitor HPC jobs using the *SLURM* job manager
