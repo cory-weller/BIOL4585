@@ -103,9 +103,11 @@ But this time, cancel the job using `scancel` after it starts. Check your job hi
 
 First, we'll edit and test the script using the `dev` queue, which doesn't cost any service units to run. However, jobs on the `dev` queue have a very low maximum time limit compared to others. Check out the other queues by running the command `queues`.
 
-1. Make a copy of the `map_reads.slurm` file for editing (so we can keep the same original intact, just in case).
+1. Try submitting `map_reads.slurm` with `sbatch`. What happens? Why?
+2. Make a copy of the `map_reads.slurm` file for editing (so we can keep the same original intact, just in case).
 2. Insert an appropriate SLURM header to this newly-created file. You'll only need a single core (`--ntasks`) and 8GB of memory. You'll want to use the `dev` queue
-3. Submit this newly edited script as a job.
+3. Submit this newly edited script. Check job progress with `sacct`.
+4. Diagnose and fix any problems that occur. The `slurm-<JOBID>.out` file may give hints of what is happening.
 
 ## Scaling up to the full-sized job
 
@@ -126,26 +128,26 @@ Sometimes you might want to submit a large number of similar jobs. For example, 
 sbatch --array=1-700%10 map_reads.slurm
 ```
 
-this would run the `map_reads.slurm` job 700 times, allowing at most 7 to be running simultaneously.
+**Try running a job array yourself:** Edit the `array_jobs.slurm` file to run with a single core, 1GB of memory, a 5 minute time request, on the standard queue. Then, submit `array_jobs.slurm` as an array of 50 jobs, limited to 5 at a time. Once submitted, use `sacct` to track the progress of your jobs.
 
-Edit the `array_jobs.slurm` file to run with a single core, 1GB of memory, a 5 minute time request, on the standard queue. Then, submit `array_jobs.slurm` as an array of 50 jobs, limited to 5 at a time. Once submitted, use `sacct` to track the progress of your jobs.
-
-## In-class questions (also on collab):
+## In-class questions (answer on collab before leaving class):
 1. What's the difference between the standard and dev queues--when would you use each?
-1. How many core-hours would it cost to run a single job with 4 cores for 45 minutes?
+2. How many core-hours would it cost to run a single job with 4 cores for 45 minutes?
 3. Run the command `allocations`. Which allocation(s) you have permissions to use when submitting jobs, and how many service-hours does it have?
 4. You view the contents a file and notice the first line is `#!/usr/bin/env python`. What is this kind of line called, and what does it tell you about the file? What does this tell the *shell* about the file?
 5. How does editing files in atom using sftp compare to editing files using `vim` or `nano`? Which do you prefer and why?
 6. You check your job progress using `sacct` and see that one of your job's status is **FAILED**. Where would you first look to diagnose the problem?
-7. Examine the below line, from the `map_reads.slurm` file. Until now you haven't seen `&&` used before. What does `&&` accomplish and why might it be useful?
+7. Examine the below line, from the `map_reads.slurm` file. Until now you haven't seen `&&` or `||` used before. What do these symbols accomplish and why might it be useful?
 
 ```bash
-mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cp ../MT_reference.fasta .
+mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder}
+cp ../MT_reference.FASTA . || { echo "could not copy MT_reference.fasta to working directory"; exit 1; }
 ```
 
 ## Homework
 
+Complete the Week 08 questions on the *Tests & Quizzes* tab of Collab.
 
+The early submission deadline is Friday Night at 11:59 PM. Final submission deadline is the start of class next week.
 
-
-3. Investigate
+Feedback will be available Saturday by no later than noon. Any questions that were wrong can be submitted to me via email for up to half credit back on incorrect answers, if submitted prior to the start of next class.

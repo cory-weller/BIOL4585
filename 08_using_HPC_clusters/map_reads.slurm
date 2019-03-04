@@ -17,7 +17,6 @@ module load gatk
 
 # Ensure we're in the proper directory and have necessary files
 mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder}
-
 cp ../MT_reference.FASTA . || { echo "could not copy MT_reference.fasta to working directory"; exit 1; }
 
 # Download the required files
