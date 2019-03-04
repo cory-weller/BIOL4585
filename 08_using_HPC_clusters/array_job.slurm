@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-#SBATCH --ntasks _____
-#SBATCH --mem _____
-#SBATCH --time _____
-#SBATCH --partition _____
-#SBATCH --account _____
+
+# Insert SLURM header here!
 
 # in a job array, the job's number is automatically saved as the variable ${SLURM_ARRAY_TASK_ID}
 # If you run an array of 10 jobs, this variable will take on values 1 through 10, one for each job in the array
