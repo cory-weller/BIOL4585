@@ -54,7 +54,7 @@ Access to computing resources can be thought of as a service, and that costs res
 
 Typically, a research group will have an *allocation* of service units that everyone in the lab draws from. The allocation is like a shared banking account for service units. For this class, we all share an *allocation* that was granted to us for course use.
 
-## Submitting and monitoring *SlURM* jobs
+## Submitting and monitoring *SLURM* jobs
 
 *SLURM* takes user-provided information to best allocate computing resources. Jobs that request little memory and little time typically have a high priority. Jobs that request a significant amount of resources may need to 'wait in line' if resources are busy. All of these decisions of where and when jobs eventually run is handled behind the scenes. When you submit a job, you specify which queue it is ran in with  `--partition` and one of the following options: `standard`, `parallel`, `largemem` or `dev`.
 
