@@ -7,11 +7,11 @@ Last week, you performed association tests using `plink`,  a `.vcf` file contain
 These kind of calculations will take more processing power than we've been using so far. If we tried to run a GWAS using a single processing core, it would take far too long. Luckily, *Rivanna* is a **High-Performance Computing** system made up of hundreds of processing cores that can be accessed by users. Today, we'll learn how to access these powerful computing resources.
 
 Specifically, you will learn:
-  * How to quickly view and modify text files using SFTP within a text editor. [*link*](#viewing-and-editing-files-with-sftp)
-  * Why it's necessary to submit jobs, instead of just running things interactively
-  * How *core-hours* represent the 'currency' of HPC systems
-  * How to submit and monitor HPC jobs using the *SLURM* job manager
-  * How to submit dozens to hundreds of related tasks using *Job Arrays*
+  * How to quickly view and modify text files using **SFTP** within a text editor. [*link*](#viewing-and-editing-files-with-sftp)
+  * Why it's necessary to submit jobs to **SLURM**, instead of just running things interactively. [*link*](#job-management-on-hpc-systems)
+  * How **core-hours** represent the 'currency' of HPC systems. [*link*](#what-are-core-hours-and-service-units)
+  * How to **submit and monitor jobs** using the SLURM job manager. [*link*](#how-to-submit-jobs-to-slurm)
+  * How to submit dozens to hundreds of related tasks using **job arrays**. [*link*](#using-job-arrays)
 
 
 ## Viewing and editing files with SFTP
@@ -38,7 +38,7 @@ The text editor **atom**, developed by the team that made [github](https://githu
 
 ![](../assets/img/atom_with_sftp.png)  
 
-## Why do I need to 'submit' jobs anyway?
+## Job management on HPC systems
 
 Many people use Rivanna at a single time. When running a program, it is typically necessary to reserve memory and processor cores. This is so the program doesn't try to access resources that are currently in use or busy. when you log in, you have limited access to a set amount of memory and processor cores. You must submit a job to the *SLURM* job manager to access more resources. FYI, *SLURM* stands for
 
@@ -54,7 +54,7 @@ Access to computing resources can be thought of as a service, and that costs res
 
 Typically, a research group will have an *allocation* of service units that everyone in the lab draws from. The allocation is like a shared banking account for service units. For this class, we all share an *allocation* that was granted to us for course use.
 
-## Jobs are submitted to *Queues*
+## Submitting and monitoring *SlURM* jobs
 
 *SLURM* takes user-provided information to best allocate computing resources. Jobs that request little memory and little time typically have a high priority. Jobs that request a significant amount of resources may need to 'wait in line' if resources are busy. All of these decisions of where and when jobs eventually run is handled behind the scenes. When you submit a job, you specify which queue it is ran in with  `--partition` and one of the following options: `standard`, `parallel`, `largemem` or `dev`.
 
@@ -63,8 +63,8 @@ Typically, a research group will have an *allocation* of service units that ever
   * the **largemem** queue is for jobs that need exceptionally large quantities of memory.
   * the **dev** is for developing and testing scripts on a small scale. This queue doesn't cost any core-hours when running, and is intended to be used to make sure code works, not for heavy use. After testing code in the **dev** queue, your tasks can be ran at the full scale on the other queues.
 
-## *SLURM* requests are formatted in `bash` scripts
-The resource requests are usually included in the header of a `bash` script. View `example_1.slurm` and `example_2.slurm` to see how they are typically formatted. The parameters in these example files are:
+### *SLURM* requests are formatted in `bash` scripts
+The resource requests are usually included in the header of a `bash` script. View the contents of `example_1.slurm` and `example_2.slurm` to see how they are typically formatted. The parameters in these example files are:
 
   * `--ntasks` followed by an integer, the number of cores requested
   * `--mem` followed by the memory requested, e.g. `8G` for 8 gigabytes, `120M` for 120 megabytes
@@ -74,15 +74,13 @@ The resource requests are usually included in the header of a `bash` script. Vie
 
 *Note*: the top line, formatted like `#!/usr/bin/env bash` is called a *shebang* line. It is used to identify what kind of language the file is written in, and ensures the file is executed using the right program. In this case, it's written in `bash` and would be executed as such.
 
-## Submitting and monitoring *SlURM* jobs
-
 To **submit** a new job, use the `sbatch` command followed by the name of the slurm script to be submitted.
 
 to **view your recent job history**, use the `sacct` command. Jobs can either be **PENDING** while waiting for resources to be available and **RUNNING** while being executed. Jobs that you interrupt will be labeled **CANCELLED** and jobs that exit with errors will be labeled **FAILED**. Those that exit without errors are labeled **COMPLETED**.
 
 To **cancel** a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, and you can view these IDs when you print your job history using `sacct`. You may wish to cancel a job if you realize there are mistakes in the code you submitted.
 
-Submit the example script located in your folder. The job should take one minute to run.
+Submit the example_1 script located in your folder, as shown below. The job should take a minute to run
 
 ```bash
 sbatch ./example_1.slurm
@@ -101,6 +99,9 @@ But this time, cancel the job using `scancel` after it starts. Check your job hi
 
 ## Writing a *SLURM* script to perform GWAS
 
+
+## Using job arrays
+Job arrays are useful when...
 
 ## In-class questions (also on collab):
 1. How many core-hours would it cost to run a single 24-core job for 15 minutes?
