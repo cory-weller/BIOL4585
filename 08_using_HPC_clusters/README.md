@@ -92,34 +92,29 @@ to **view your recent job history**, use the `sacct` command. Jobs typically hav
 
 To **cancel** a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, and you can view these IDs when you print your job history using `sacct`. You may wish to cancel a job if you realize there are mistakes in the code you submitted.
 
-First, view the contents of the example slurm script. Notice there are missing values in the header. You will need to edit the values to request 1 core (`--ntasks`), 1GB of memory (`--mem`), to run on the queue `standard` (`--partition`), and to use the class's allocation (`--account`, run `allocations` to view which allocations you have access to). Then, submit the script as a job (shown below). The job should take a minute to run.
+##
+
+
+## Writing and submitting *SLURM* scripts
+1. First, view the contents of the example slurm script. Notice there are missing values in the header. You will need to edit the values to request 1 core (`--ntasks`), 1GB of memory (`--mem`), to run on the queue `standard` (`--partition`), and to use the class's allocation (`--account`, run `allocations` to view which allocations you have access to). Then, submit the script as a job (shown below). The job should take a minute to run.
 
 ```bash
 sbatch ./example.slurm
 ```
 
-
-
-Check the progress of the job using `sacct`, to see the progress change from pending to running to completed.
+2. Check the progress of the job using `sacct`, to see the progress change from pending to running to completed.
 
 Any messages or errors that are printed during your job will be printed to a file named `slurm-JOBID.out`. This means that you'll need to manually view the contents of the file to see what was printed while the job ran.
 
-Next, submit the same job again.
-```bash
-sbatch ./example_1.slurm
-```
+3. Submit the same job again. But this time, cancel the job using `scancel` after it starts. The JOBID is printed to your screen when you submit the job, and can also be seen in your job history (`sacct`). After cancelling, `sacct` will show that the job status changed to **CANCELLED**.
 
-But this time, cancel the job using `scancel` after it starts. Check your job history with `sacct` to see that the job status changed to **CANCELLED**. Then view the output of `slurm-JOBID.out` for this most recently ran job, compared to the first one.
+Next, we'll edit and test a script that maps sequencing reads, using the `dev` queue. The `dev` queue doesn't cost any service units to run. However, jobs on the `dev` queue have a very low maximum time limit compared to others. You can see a list of available queues by running the command `queues`.
 
-## Writing and submitting a *SLURM* script to perform GWAS
-
-First, we'll edit and test the script using the `dev` queue, which doesn't cost any service units to run. However, jobs on the `dev` queue have a very low maximum time limit compared to others. Check out the other queues by running the command `queues`.
-
-1. Try submitting `map_reads.slurm` with `sbatch`. What happens? Why?
-2. Make a copy of the `map_reads.slurm` file for editing (so we can keep the same original intact, just in case).
-2. Insert an appropriate SLURM header to this newly-created file. You'll only need a single core (`--ntasks`) and 8GB of memory. You'll want to use the `dev` queue
-3. Submit this newly edited script. Check job progress with `sacct`.
-4. Diagnose and fix any problems that occur. The `slurm-<JOBID>.out` file may give hints of what is happening.
+4. Try submitting `map_reads.slurm` with `sbatch`. What happens? Why?
+5. Make a copy of the `map_reads.slurm` file for editing (so we can keep the same original intact, just in case).
+6. Insert an appropriate SLURM header to this newly-created file. You'll only need a single core (`--ntasks`) and 8GB of memory. You'll want to use the `dev` queue
+7. Submit this newly edited script. Check job progress with `sacct`.
+8. Diagnose and fix any problems that occur. The `slurm-<JOBID>.out` file may give hints of what is happening.
 
 ## Scaling up to the full-sized job
 
