@@ -7,10 +7,36 @@ Last week, you performed association tests using `plink`,  a `.vcf` file contain
 These kind of calculations will take more processing power than we've been using so far. If we tried to run a GWAS using a single processing core, it would take far too long. Luckily, *Rivanna* is a **High-Performance Computing** system made up of hundreds of processing cores that can be accessed by users. Today, we'll learn how to access these powerful computing resources.
 
 Specifically, you will learn:
+  * How to quickly view and modify text files using SFTP within a text editor. [*link*](viewing-and-editing-files-with-sftp)
   * Why it's necessary to submit jobs, instead of just running things interactively
   * How *core-hours* represent the 'currency' of HPC systems
   * How to submit and monitor HPC jobs using the *SLURM* job manager
   * How to submit dozens to hundreds of related tasks using *Job Arrays*
+
+
+## Viewing and editing files with SFTP
+
+Until now, you've viewed files using `cat` or `less` and edited files with `vim` or `nano`. While these commands are useful, sometimes all we want is to edit documents in a text editor. Now that you've learned how to do things the *hard* way, we'll be learning a much simpler method, called **SFTP**. SFTP stands for SSH File Transfer Protocol, and that's exactly what it does: transfers files over SSH. This will let you use a file browser within a text editor, so you can directly open, read, modify, and save text files in your Rivanna directory.
+
+The text editor **atom**, developed by the team that made [github](https://github.com).
+
+1. Download and install the [atom text editor](https://atom.io/)
+
+2. Open the settings menu under File/Settings or with they key combination `Ctrl` + `comma`
+
+3. Select **install** from the settings window and install the package [ftp-remote-edit](https://atom.io/packages/ftp-remote-edit)
+
+4. Open the package with `Ctrl` + `spacebar`
+
+5. You will be prompted to create a password--this is an entirely new password, specific to the text editor. Think of it like a master password for accessing other servers.
+
+6. To access files on Rivanna, you need to enter information for connecting to it. Yours should look similar to the settings below, but with your own computing ID and your own Rivanna password.
+
+![](../assets/img/atom_sftp_settings.png)
+
+7. You should now see your `/scratch/<computingID>/` folders within the file browser. You can open them to view or edit the contents. Upon saving, it will be uploaded to Rivanna. You can collapse and expand a directory to refresh its contents.
+
+![](../assets/img/atom_with_sftp.png)  
 
 ## Why do I need to 'submit' jobs anyway?
 
@@ -21,6 +47,8 @@ Many people use Rivanna at a single time. When running a program, it is typicall
   * Utility for
   * Resource
   * Management
+
+## What are core-hours and service units?
 
 Access to computing resources can be thought of as a service, and that costs resources. In order to make sure that access to Rivanna is shared across all users, instead of being hogged by few, access is 'bought' with a 'currency' called **service units** measured in core-hours: if you run a job on a single core for one hour, that job 'costs' one core-hour.
 
