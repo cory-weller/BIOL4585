@@ -24,12 +24,7 @@ Many people use Rivanna at a single time. When running a program, it is typicall
 
 Access to computing resources can be thought of as a service, and that costs resources. In order to make sure that access to Rivanna is shared across all users, instead of being hogged by few, access is 'bought' with a 'currency' called **service units** measured in core-hours: if you run a job on a single core for one hour, that job 'costs' one core-hour.
 
-1. *On collab in-quest questions:* How many core-hours would it cost to run a single 24-core job for 15 minutes?
-2. *On collab in-quest questions:* How many core-hours would it cost to run a job array of 120 jobs, each expected to run for 3 hours, with 4 cores a piece?
-
 Typically, a research group will have an *allocation* of service units that everyone in the lab draws from. The allocation is like a shared banking account for service units. For this class, we all share an *allocation* that was granted to us for course use.
-
-3. Run the command `allocations`. Which allocation(s) you have permissions to use when submitting jobs, and how many service-hours does it have?
 
 ## Jobs are submitted to *Queues*
 
@@ -45,22 +40,45 @@ The resource requests are usually included in the header of a `bash` script. Vie
 
   * `--ntasks` followed by an integer, the number of cores requested
   * `--mem` followed by the memory requested, e.g. `8G` for 8 gigabytes, `120M` for 120 megabytes
-  * `--time` followed by the time limit for the job, including days, hours, minutes and secondsL `D-HH:MM:SS`, e.g. `0-12:00:00` for 12 hours.
+  * `--time` followed by the time limit formatted as `D-HH:MM:SS`, e.g. `0-12:00:00` for 12 hours.
   * `--partition` followed by the queue, e.g. `standard` or `dev`
   * `--account` followed by the allocation of service units to draw from
 
 *Note*: the top line, formatted like `#!/usr/bin/env bash` is called a *shebang* line. It is used to identify what kind of language the file is written in, and ensures the file is executed using the right program. In this case, it's written in `bash` and would be executed as such.
 
-4. You view the contents a file and notice the first line is `#!/usr/bin/env python`. What does this tell you about the file? What does this tell the *shell* about the file?
-
 ## Submitting and monitoring *SlURM* jobs
 
-The `sbatch` command is used to submit a slurm script as a job.
+To **submit** a new job, use the `sbatch` command followed by the name of the slurm script to be submitted.
 
-`sacct` will print your recent job history. Jobs can either be **PENDING** while waiting for resources to be available and **RUNNING** while being executed. Jobs that you interrupt will be labeled **CANCELLED** and jobs that exit with errors will be labeled **FAILED**. Those that exit without errors are labeled **COMPLETED**.
+to **view your recent job history**, use the `sacct` command. Jobs can either be **PENDING** while waiting for resources to be available and **RUNNING** while being executed. Jobs that you interrupt will be labeled **CANCELLED** and jobs that exit with errors will be labeled **FAILED**. Those that exit without errors are labeled **COMPLETED**.
 
-If you want to cancel a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, shown when you print your job history using `sacct`.
+To **cancel** a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, and you can view these IDs when you print your job history using `sacct`. You may wish to cancel a job if you realize there are mistakes in the code you submitted.
 
+Submit the example script located in your folder. The job should take one minute to run.
+
+```bash
+sbatch ./example_1.slurm
+```
+
+Check the progress of the job using `sacct`, to see the progress change from pending to running to completed.
+
+Any messages or errors that are printed during your job will be printed to a file named `slurm-JOBID.out`. View the contents of the file to see what was printed after the job completed.
+
+Next, submit the same job again.
+```bash
+sbatch ./example_1.slurm
+```
+
+But this time, cancel the job using `scancel` after it starts. Check your job history with `sacct` to see that the job status changed to **CANCELLED**. Then view the output of `slurm-JOBID.out` for this most recently ran job, compared to the first one.
+
+## Writing a *SLURM* script to perform GWAS
+
+
+## In-class questions (also on collab):
+1. How many core-hours would it cost to run a single 24-core job for 15 minutes?
+2. How many core-hours would it cost to run a job array of 120 jobs, each expected to run for 3 hours, with 4 cores a piece?
+3. Run the command `allocations`. Which allocation(s) you have permissions to use when submitting jobs, and how many service-hours does it have?
+4. You view the contents a file and notice the first line is `#!/usr/bin/env python`. What does this tell you about the file? What does this tell the *shell* about the file?
 
 ## Homework
 
