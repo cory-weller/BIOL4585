@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --ntasks _____
 #SBATCH --mem _____
-#SBATCH --time 0-00:00:05
+#SBATCH --time _____
 #SBATCH --partition _____
 #SBATCH --account _____
 
@@ -10,16 +10,16 @@
 
 echo "slurm job submitted by ${USER}"
 
-sleep 5
+sleep 3
 
 echo "this job's number in the array is ${SLURM_ARRAY_TASK_ID}"
 
-sleep 5
+sleep 3
 
 echo "the ID for the entire job array is ${SLURM_ARRAY_JOB_ID}"
 
-sleep 5
+sleep 3
 
 echo "the unique ID for this job array is ${SLURM_JOB_ID}"
 
-sleep 5
+sleep 3

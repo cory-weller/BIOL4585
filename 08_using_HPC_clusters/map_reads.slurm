@@ -16,7 +16,7 @@ module load gatk
 
 
 # Ensure we're in the proper directory
-mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder}
+mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cp ../MT_reference.fasta .
 
 # Download the required files
 # -X <integer> downloads a subset of the first <integer> sequencing reads

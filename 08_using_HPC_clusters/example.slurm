@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH --ntasks _____
 #SBATCH --mem _____
-#SBATCH --time 0-00:01:00
+#SBATCH --time 0-00:02:00
 #SBATCH --partition _____
 #SBATCH --account _____
 
