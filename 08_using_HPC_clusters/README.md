@@ -22,19 +22,19 @@ The text editor **atom**, developed by the team that made [github](https://githu
 
 1. Download and install the [atom text editor](https://atom.io/)
 
-2. Open the settings menu under File/Settings or with they key combination `Ctrl` + `comma`
+2. Open atom, and then open the settings menu under File/Settings or with they key combination `Ctrl` + `comma`
 
-3. Select **install** from the settings window and install the package [ftp-remote-edit](https://atom.io/packages/ftp-remote-edit)
+3. Select **Install** from the settings window and install the package [ftp-remote-edit](https://atom.io/packages/ftp-remote-edit) by the author h3imdall
 
 4. Open the package with `Ctrl` + `spacebar`
 
-5. You will be prompted to create a password--this is an entirely new password, specific to the text editor. Think of it like a master password for accessing other servers.
+5. You will be prompted to create a master password--this is an entirely new password, specific to the text editor. Think of it like a master password for accessing other servers.
 
-6. To access files on Rivanna, you need to enter information for connecting to it. Yours should look similar to the settings below, but with your own computing ID and your own Rivanna password.
+6. To access files on Rivanna, you need to enter information for connecting to it. Click **edit servers** to enter information. Yours should look similar to the settings below, but with your own computing ID and your own Rivanna password.
 
 ![](../assets/img/atom_sftp_settings.png)
 
-7. You should now see your `/scratch/<computingID>/` folders within the file browser. You can open them to view or edit the contents. Upon saving, it will be uploaded to Rivanna. You can collapse and expand a directory to refresh its contents.
+7. Expand the `Rivanna` folder to see the contents of your scratch directory within the file browser. You can open them to view or edit the contents. Upon saving, it will be uploaded to Rivanna. You can collapse and expand a directory to refresh its contents.
 
 ![](../assets/img/atom_with_sftp.png)  
 
@@ -137,7 +137,7 @@ sbatch --array=1-700%10 map_reads.slurm
 4. You view the contents a file and notice the first line is `#!/usr/bin/env python`. What is this kind of line called, and what does it tell you about the file? What does this tell the *shell* about the file?
 5. How does editing files in atom using sftp compare to editing files using `vim` or `nano`? Which do you prefer and why?
 6. You check your job progress using `sacct` and see that one of your job's status is **FAILED**. Where would you first look to diagnose the problem?
-7. Examine the below line, from the `map_reads.slurm` file. Until now you haven't seen `&&` or `||` used before. What do these symbols accomplish and why might it be useful?
+7. Examine the below lines, from the `map_reads.slurm` file. Until now you haven't seen `&&` or `||` used before. What do these symbols accomplish and why might it be useful?
 
 ```bash
 mkdir -p /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder} && cd /scratch/$USER/BIOL4585/08_using_HPC_clusters/${subfolder}
