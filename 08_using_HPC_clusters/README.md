@@ -92,7 +92,7 @@ to **view your recent job history**, use the `sacct` command. Jobs typically hav
 
 To **cancel** a currently-running job, you can run `scancel JOBID`. `JOBID` is the number associated with a specific job, and you can view these IDs when you print your job history using `sacct`. You may wish to cancel a job if you realize there are mistakes in the code you submitted.
 
-First, view the contents of the example slurm script to request 1 core (`--ntasks`), 1GB of memory (`--mem`), on the queue `standard` (`--partition`), using the class allocation (`--account`, run `allocations` to view which allocations you have access to). Then, submit the script as a job (shown below). The job should take a minute to run.
+First, view the contents of the example slurm script. Notice there are missing values in the header. You will need to edit the values to request 1 core (`--ntasks`), 1GB of memory (`--mem`), to run on the queue `standard` (`--partition`), and to use the class's allocation (`--account`, run `allocations` to view which allocations you have access to). Then, submit the script as a job (shown below). The job should take a minute to run.
 
 ```bash
 sbatch ./example.slurm
