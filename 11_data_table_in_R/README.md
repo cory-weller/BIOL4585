@@ -65,7 +65,7 @@ First, complete the Data Camp *Introduction to data.table* chapter, under the **
 
 gunzip the `chrMT.vcf.gz` file in this week's project directory, and then launch `R`. Remember to load the `gcc` and `R/3.5.1` modules before launching `R`, if you haven't already for this session. If you are already in R, you can temporarily suspend it by pressing `CTRL` + `Z`, then perform `gunzip` on the file, then execute `fg` to bring `R` back into the *foreground*.
 
-1. How many sites are multi-allelic? Hint: multi-allelic sites will have the various alternate nucleotides separated by a comma. Use %like% to select rows that include a "," pattern in this column. Submit your command and the number of rows it gives.
+1. How many sites are multi-allelic? Hint: multi-allelic sites will have the various alternate nucleotides separated by a comma. Use `%like%` to select rows that include a "," pattern in this column. Submit your command and the number of rows it gives.
 
 2. How many sites are between position 10000 and 20000? Hint: use `%between%` or a combination of `>` and `<` with the `POS` column. Submit your command and the number of rows it gives.
 
