@@ -81,6 +81,6 @@ This recent plot is great, but there's a problem of data overlapping. With scatt
 
 13. Modify your code from **11** from a scatter plot to each of three other methods: a jitter plot, using `geom_jitter()`, a violin plot, using `geom_violin()`, and a boxplot, using `geom_boxplot()`. What are the differences between these three plots? What are similarities in what they tell you?
 
-14. Currently, your plot's labels default to column names. Choose your favorite plot from **9** and tidy up the labels to your plot with better descriptors and capitalization, plus a title. For these you can use the `ggplot` elements `xlab()`, `ylab()` and `ggtitle()`, or simultaneously using `labs()`. Upload a screenshot of the plot...
+14. Currently, your plot's labels default to column names. Choose your favorite plot from **13** and tidy up the labels to your plot with better descriptors and capitalization, plus a title. For these you can use the `ggplot` elements `xlab()`, `ylab()` and `ggtitle()`, or simultaneously using `labs()`. Upload a screenshot of the plot...
 
 15 ...as well as the code used to generate it.
