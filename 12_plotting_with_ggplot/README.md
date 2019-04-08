@@ -3,6 +3,8 @@ If you use R, you'll almost certainly be using `ggplot` for generating figures, 
 
 First, complete the Data Camp chapter **Data Visualization with ggplot2 (Part 1)**. This should give you an introduction to the basic syntax of ggplot before we work with it using some biological data.
 
+Second, work through the below exercises. The numbered questions are available under the **Tests & Quizzes** tab of collab.
+
 ## Getting ready to use ggplot on Rivanna
 
 Log into Rivanna and start R (after loading the **gcc** and **R/3.5.1** modules).
