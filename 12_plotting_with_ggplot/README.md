@@ -1,4 +1,5 @@
-## Data Camp Intro to ggplot2
+## ggplot, the R language of plotting
+If you use R, you'll almost certainly be using `ggplot` for generating figures, or plots. This will be a crash course in the syntax of `ggplot`.
 
 First, complete the Data Camp chapter **Data Visualization with ggplot2 (Part 1)**. This should give you an introduction to the basic syntax of ggplot before we work with it using some biological data.
 
