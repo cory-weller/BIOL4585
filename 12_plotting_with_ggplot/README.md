@@ -65,7 +65,7 @@ Thus far, we've looked at the relationship between length and width for **sepals
 
 Currently, the data is in *wide format*. More advanced plotting techniques are typically easiest in *long format* (also called *narrow format*), where every sample * variable combination is on its own row. You can see a brief example of the difference on the [wikipedia page.](https://en.wikipedia.org/wiki/Wide_and_narrow_data)
 
-8. Convert the data to long format using the `melt()` function, and save this long format data to a new variable. When using `melt()`, you supply a `data.table` object to convert to long format, plus a vector of column names that are being *melted* into long format. Those column names are listed using the `measure.vars=` argument. You will be melting the columns that describe sepal and petal dimensions (but not species). How many rows does this new table have?
+8. Convert the data to long format using the `melt()` function, and save this long format data to a new variable. Note that you will need to have the `data.table` package loaded!  When using `melt()`, you supply a `data.table` object to convert to long format, plus a vector of column names that are being *melted* into long format.Those column names are listed using the `measure.vars=` argument. You will be melting the columns that describe sepal and petal dimensions (but not species). How many rows does this new table have?
 
 ## Facetting plots
 
