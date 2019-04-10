@@ -79,7 +79,7 @@ Now that we have data in long format, we can take advantage of plot faceting. Fa
 
 12. ...and add the code used to generate it.
 
-This recent plot is great, but there's a problem of data overlapping. With scatter plots (`geom_point()`), any points that shareidentical X and Y values will overlap. We can display the data in a couple different ways to get a better idea of the distribution.
+This recent plot is great, but there's a problem of data overlapping. With scatter plots (`geom_point()`), any points that share identical X and Y values will overlap. We can display the data in a couple different ways to get a better idea of the distribution.
 
 13. Modify your code from **11** from a scatter plot to each of three other methods: a jitter plot, using `geom_jitter()`, a violin plot, using `geom_violin()`, and a boxplot, using `geom_boxplot()`. What are the differences between these three plots? What are similarities in what they tell you?
 
