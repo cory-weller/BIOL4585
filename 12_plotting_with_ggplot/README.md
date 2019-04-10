@@ -37,7 +37,7 @@ We'll be Using the `iris` premade dataframe, which describes measurements for di
 
 First, let's look at the relationship between sepal length and sepal width. Sepals are the green leafy parts at the base of the flower, beneath the petals.
 
-Plot sepal width on the x-axis and sepal height on the y. Note you'll need to match the spelling of the columns in your `data.table` to plot it, otherwise you'll get an error **object not found**. We'll want a scatter plot, using `geom_point()`
+Plot sepal width on the x-axis and sepal length on the y. Note you'll need to match the spelling of the columns in your `data.table` to plot it, otherwise you'll get an error **object not found**. We'll want a scatter plot, using `geom_point()`
 
 ## Dimensions of Plotting
 
