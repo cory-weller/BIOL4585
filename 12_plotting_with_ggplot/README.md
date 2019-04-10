@@ -53,6 +53,8 @@ To add another dimension to the data, we don't need to make a visually 3D plot. 
 
 4. Was it easier to discern patterns using color or shape as the dimension for species? Why?
 
+Thus far, we've looked at the relationship between length and width for **sepals**. Now we're going to look at the relationship between length and witdth for **petals**.
+
 5. Modify your `ggplot` command (that you preferred, whether using shape or color for species) to now show the relationship between petal length and petal width. Upload a screenshot of your plot...
 
 6. ...and submit the code used to generate it.
