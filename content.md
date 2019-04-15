@@ -21,6 +21,6 @@ subject: Content
 | 10 | [Intro to R programming](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/10_intro_to_R) |
 | 11 | [Using data.table in R](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/11_data_table_in_R) |
 | 12 | [Plotting with ggplot](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/12_plotting_with_ggplot) |
-| 13 | [Data Interpreation Project](https://github.com/{{ site.github }}/BIOL4585_projects) |
-| 14 | Data Interpreation Project Worktime |
-| 15 | Data Interpreation Project Presentations |
+| 13 | [Data Interpretation Project](https://github.com/{{ site.github }}/BIOL4585_projects) |
+| 14 | Data Interpretation Project Worktime |
+| 15 | Data Interpretation Project Presentations |
