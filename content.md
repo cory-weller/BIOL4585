@@ -17,11 +17,10 @@ subject: Content
 | 6 | [Mapping sequencing data](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/06_mapping_sequencing_data) |
 | 7 | [Association testing](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/07_association_testing) |
 | 8 | [Batch processing / HPC clusters](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/08_using_HPC_clusters) |
-| 9 | [Using git](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/09_using_git) |
+| 9 | Break |
 | 10 | [Intro to R programming](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/10_intro_to_R) |
 | 11 | [Using data.table in R](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/11_data_table_in_R) |
 | 12 | [Plotting with ggplot](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/12_plotting_with_ggplot) |
-| 13 | [Parallel processing in R](https://github.com/{{ site.github }}/{{ site.repo }}/tree/master/13_batch_processing_in_R) |
-| 14 | Group project work time |
-| 15 | Group project work time |
-| 16 | Presentations |
+| 13 | [Data Interpreation Project](https://github.com/{{ site.github }}/BIOL4585_projects) |
+| 14 | Data Interpreation Project Worktime |
+| 15 | Data Interpreation Project Presentations |
