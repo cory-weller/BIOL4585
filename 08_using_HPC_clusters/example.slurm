@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-#SBATCH --ntasks _____
-#SBATCH --mem _____
+#SBATCH --ntasks 1
+#SBATCH --mem 1G
 #SBATCH --time 0-00:02:00
-#SBATCH --partition _____
-#SBATCH --account _____
+#SBATCH --partition standard
+#SBATCH --account biol4585
 
 echo "slurm job ${SLURM_JOB_ID} submitted by ${USER}"
 
