@@ -4,12 +4,10 @@
 [Cory Weller](mailto:caw5cv@virginia.edu)  
 
 ### Weekly meeting time
- Mondays, 4:00 PM - 5:50 PM  
- (in Shannon 109)
+ Mondays, 4:00 PM - 5:50 PM  (in Shannon 109)
 
 ### Office Hours
- Wednesdays, Noon - 2:00 PM  
- (in PLSB 403)
+ Wednesdays, Noon - 2:00 PM  (in PLSB 403)
 
 ## Course Description
 ### Consider the human genome.
