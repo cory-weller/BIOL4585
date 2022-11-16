@@ -6,7 +6,7 @@
 | 3    | [Navigating in bash](03_navigating_in_bash) |
 | 4    | [Regular expressions](04_regular_expressions) |
 | 5    | [What is GWAS?](05_what_is_GWAS) |
-| 6    | [Mapping sequencing data](.06_mapping_sequencing_data) |
+| 6    | [Mapping sequencing data](06_mapping_sequencing_data) |
 | 7    | [Association testing](07_association_testing) |
 | 8    | [Batch processing / HPC clusters](08_using_HPC_clusters) |
 | 9    | Break |
