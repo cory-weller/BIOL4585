@@ -1,9 +1,3 @@
----
-layout: default
-subject: How to Succeed
----
-
-
 # Want to do well in this class?
 The skills developed in this course can only be learned by practicing them. This will involve a *lot* of:
   * typing commands into your terminal,
