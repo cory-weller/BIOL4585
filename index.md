@@ -1,8 +1,3 @@
----
-layout: default
-subject: Syllabus
----
-
 # Introduction to Computational Biology  
 
 ### Instructor
