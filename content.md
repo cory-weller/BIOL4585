@@ -13,6 +13,6 @@
 | 10   | [Intro to R programming](10_intro_to_R) |
 | 11   | [Using data.table in R](11_data_table_in_R) |
 | 12   | [Plotting with ggplot](12_plotting_with_ggplot) |
-| 13   | [Data Interpretation Project - Open Worktime |
+| 13   | Data Interpretation Project - Open Worktime |
 | 14   | Data Interpretation Project - Open Worktime |
 | 15   | Data Interpretation Project - Presentations |
